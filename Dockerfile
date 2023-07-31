@@ -13,5 +13,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the rest of the application code into the container
 COPY . .
 
-# Expose the port that your web service is listening on
+# Expose port 8080 for the web service
 EXPOSE 8080
+
+# Start the web service
+CMD ["python", "__main__.py"]
